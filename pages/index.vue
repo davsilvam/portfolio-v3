@@ -18,7 +18,7 @@
           {{ t('job') }}
         </BaseOutlineTitle>
         <ul
-          class="flex items-center justify-center gap-6 pt-4 font-[Poppins] text-lg md:gap-12 md:pt-6"
+          class="flex items-center justify-center gap-6 font-[Poppins] text-lg font-medium md:gap-12 pt-4"
         >
           <li>
             <h3>
