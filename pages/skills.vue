@@ -20,7 +20,7 @@
       <ul class="grid grid-cols-2 gap-8 pt-8 md:grid-cols-4">
         <li>
           <a
-            class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
             href="https://nuxt.com"
             target="_blank"
           >
@@ -30,7 +30,7 @@
         </li>
         <li>
           <a
-            class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
             href="https://vuejs.org"
             target="_blank"
           >
@@ -40,7 +40,7 @@
         </li>
         <li>
           <a
-            class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
             href="https://www.typescriptlang.org"
             target="_blank"
           >
@@ -50,7 +50,7 @@
         </li>
         <li>
           <a
-            class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
             href="https://tailwindcss.com"
             target="_blank"
           >
@@ -67,22 +67,22 @@
       <BaseOutlineTitle class="text-6xl">Soft Skills</BaseOutlineTitle>
       <ul class="grid grid-cols-2 gap-8 pt-8 max-md:pb-28 md:grid-cols-4">
         <li
-          class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
           <FolderOpenIcon class="w-12" />{{ t('organized') }}
         </li>
         <li
-          class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
           <FaceSmileIcon class="w-12" />{{ t('positive') }}
         </li>
         <li
-          class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
           <PaintBrushIcon class="w-12" />{{ t('creative') }}
         </li>
         <li
-          class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
+          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
           <RocketLaunchIcon class="w-12" />{{ t('flexible') }}
         </li>

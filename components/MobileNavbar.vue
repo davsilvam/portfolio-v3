@@ -52,7 +52,7 @@
       <li class="col-span-2 w-full">
         <NuxtLink
           :to="localePath('/about-me')"
-          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
+          class="bg-secondary-800 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
         >
           <ChevronLeftIcon class="w-6" /> {{ t('about_me') }}
         </NuxtLink>
@@ -60,7 +60,7 @@
       <li class="col-span-2 w-full">
         <NuxtLink
           :to="localePath('/projects')"
-          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
+          class="bg-secondary-800 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
         >
           {{ t('projects') }} <ChevronRightIcon class="w-6" />
         </NuxtLink>
@@ -68,7 +68,7 @@
       <li class="col-span-4 w-full">
         <NuxtLink
           :to="localePath('/skills')"
-          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-20 w-full flex-col items-center justify-center gap-1 rounded-md text-lg font-semibold"
+          class="bg-secondary-800 hover:bg-secondary-800/30 flex h-20 w-full flex-col items-center justify-center gap-1 rounded-md text-lg font-semibold"
         >
           {{ t('skills') }} <ChevronDownIcon class="w-6" />
         </NuxtLink>
@@ -80,7 +80,7 @@
     >
       <NuxtLink
         :to="localePath('/')"
-        class="bg-secondary-800/20 hover:bg-secondary-800/30 col-span-4 flex h-20 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
+        class="bg-secondary-800 hover:bg-secondary-800/30 col-span-4 flex h-20 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
       >
         {{ t('home_page') }}
         <ChevronRightIcon
