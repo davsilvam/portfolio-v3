@@ -21,7 +21,7 @@
 
 <template>
   <header class="fixed top-0 z-10 flex w-full items-center justify-between p-8">
-    <img class="h-6" src="../assets/logo.png" alt="David's Logo" />
+    <nuxt-img class="h-6" src="/logo.png" alt="David's Logo" />
 
     <div class="relative">
       <button

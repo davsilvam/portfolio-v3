@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
   i18n: {
     locales: [
       {
