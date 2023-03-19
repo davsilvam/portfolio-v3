@@ -6,6 +6,9 @@
     PaintBrushIcon,
     RocketLaunchIcon
   } from '@heroicons/vue/24/outline'
+
+  const { t } = useLang()
+  const localePath = useLocalePath()
 </script>
 
 <template>
@@ -57,9 +60,7 @@
         </li>
       </ul>
       <p class="text-secondary-200 max-w-[600px] px-8 pt-4 text-sm">
-        Além disso, possuo conhecimento em tecnologias como: Pinia, Prisma,
-        Serviços Back-end as a Service ou BaaS (Firebase e Supabase), React,
-        Radix UI, Styled Components, Sass.
+        {{ t('extra_hard_skills') }}
       </p>
     </section>
     <section class="flex flex-col items-center pt-5">
@@ -68,31 +69,31 @@
         <li
           class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
-          <FolderOpenIcon class="w-12" />Organizado
+          <FolderOpenIcon class="w-12" />{{ t('organized') }}
         </li>
         <li
           class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
-          <FaceSmileIcon class="w-12" />Positivo
+          <FaceSmileIcon class="w-12" />{{ t('positive') }}
         </li>
         <li
           class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
-          <PaintBrushIcon class="w-12" />Criativo
+          <PaintBrushIcon class="w-12" />{{ t('creative') }}
         </li>
         <li
           class="hover:bg-secondary-800/20 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
         >
-          <RocketLaunchIcon class="w-12" />Flexível
+          <RocketLaunchIcon class="w-12" />{{ t('flexible') }}
         </li>
       </ul>
     </section>
     <NuxtLink
-      to="/"
-      class="text-secondary-50 absolute top-10 hidden flex-col items-center align-middle text-lg font-semibold uppercase md:flex"
+      :to="localePath('/')"
+      class="text-secondary-50 absolute top-10 z-20 hidden flex-col items-center align-middle text-lg font-semibold uppercase md:flex"
     >
       <ChevronUpIcon class="w-6" />
-      Página Inicial
+      {{ t('home_page') }}
     </NuxtLink>
   </div>
 </template>

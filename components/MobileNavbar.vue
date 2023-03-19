@@ -13,11 +13,17 @@
     isNavbarOpen.value = !isNavbarOpen.value
   }
 
+  const { t } = useLang()
+  const localePath = useLocalePath()
   const route = useRoute()
-  const currentPath = ref(route.path)
+  const currentPath = ref(localePath(route.path))
 
   watchEffect(() => {
-    if (route.path) currentPath.value = route.path
+    if (route.path) currentPath.value = localePath(route.path)
+  })
+
+  watch(route, () => {
+    toogleNavbar()
   })
 </script>
 
@@ -28,7 +34,7 @@
     :class="[
       isNavbarOpen
         ? 'translate-y-0'
-        : currentPath === '/'
+        : currentPath === localePath('/')
         ? 'translate-y-[310px]'
         : 'translate-y-[130px]'
     ]"
@@ -41,30 +47,30 @@
     </button>
     <ul
       class="text-secondary-50 grid grid-cols-4 place-items-center gap-5 p-6"
-      v-if="currentPath === '/'"
+      v-if="currentPath === localePath('/')"
     >
       <li class="col-span-2 w-full">
         <NuxtLink
-          to="/about-me"
-          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-2 rounded-md text-lg font-semibold"
+          :to="localePath('/about-me')"
+          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
         >
-          <ChevronLeftIcon class="w-6" /> Sobre mim
+          <ChevronLeftIcon class="w-6" /> {{ t('about_me') }}
         </NuxtLink>
       </li>
       <li class="col-span-2 w-full">
         <NuxtLink
-          to="/projects"
-          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-2 rounded-md text-lg font-semibold"
+          :to="localePath('/projects')"
+          class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-40 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
         >
-          Projetos <ChevronRightIcon class="w-6" />
+          {{ t('projects') }} <ChevronRightIcon class="w-6" />
         </NuxtLink>
       </li>
       <li class="col-span-4 w-full">
         <NuxtLink
-          to="/skills"
+          :to="localePath('/skills')"
           class="bg-secondary-800/20 hover:bg-secondary-800/30 flex h-20 w-full flex-col items-center justify-center gap-1 rounded-md text-lg font-semibold"
         >
-          Habilidades <ChevronDownIcon class="w-6" />
+          {{ t('skills') }} <ChevronDownIcon class="w-6" />
         </NuxtLink>
       </li>
     </ul>
@@ -73,13 +79,22 @@
       v-else
     >
       <NuxtLink
-        to="/"
+        :to="localePath('/')"
         class="bg-secondary-800/20 hover:bg-secondary-800/30 col-span-4 flex h-20 w-full items-center justify-center gap-1 rounded-md text-lg font-semibold"
       >
-        Página Inicial
-        <ChevronRightIcon v-if="currentPath === '/about-me'" class="w-6" />
-        <ChevronLeftIcon v-else-if="currentPath === '/projects'" class="w-6" />
-        <ChevronUpIcon v-else-if="currentPath === '/skills'" class="w-6" />
+        {{ t('home_page') }}
+        <ChevronRightIcon
+          v-if="currentPath === localePath('/about-me')"
+          class="w-6"
+        />
+        <ChevronLeftIcon
+          v-else-if="currentPath === localePath('/projects')"
+          class="w-6"
+        />
+        <ChevronUpIcon
+          v-else-if="currentPath === localePath('/skills')"
+          class="w-6"
+        />
       </NuxtLink>
     </div>
   </nav>
