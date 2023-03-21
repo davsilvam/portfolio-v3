@@ -1,51 +1,14 @@
 <script lang="ts" setup>
-  import { ChevronDownIcon, MapPinIcon } from '@heroicons/vue/24/outline'
+  import {
+    ChevronDownIcon,
+    ChevronLeftIcon,
+    ChevronRightIcon
+  } from '@heroicons/vue/24/outline'
 
   const { t } = useLang()
   const localePath = useLocalePath()
-
-  interface Project {
-    name: string
-    category: string
-    description: string
-    image_url: string
-    language: string
-    deploy_link: string
-    repository_link: string
-  }
-
-  const topProjects: Project[] = [
-    {
-      image_url: '/parsi_badge.png',
-      name: 'Parsi',
-      category: 'Gerenciador de Finanças',
-      description:
-        'A Parsi é uma aplicação web que ajuda a registrar suas transações e auxilia no melhor gerenciamento dos gastos.',
-      language: 'Vue.js',
-      deploy_link: 'https://parsi-app.vercel.app',
-      repository_link: 'https://github.com/davsilvam/parsi-app'
-    },
-    {
-      image_url: '/movieshelf_badge.png',
-      name: 'Movieshelf',
-      category: 'Estante de Filmes',
-      description:
-        'A Movieshelf é uma estante virtual, na qual você pode adicionar filmes à sua estante, favoritar ou salvar filmes para sua próxima sessão.',
-      language: 'React.js',
-      deploy_link: 'https://movieshelf-two.vercel.app',
-      repository_link: 'https://github.com/davsilvam/movieshelf'
-    },
-    {
-      image_url: '/towo_badge.png',
-      name: 'ToWo',
-      category: 'Registro de Treinos',
-      description:
-        'ToWo é uma aplicação voltado para o registro de suas atividades físicas, especificamente, atividades que envolvam séries de exercícios.',
-      language: 'Vue.js',
-      deploy_link: 'https://towo-list.vercel.app',
-      repository_link: 'https://github.com/davsilvam/towo-list'
-    }
-  ]
+  const { currentPage, goToNextPage, goToPreviousPage, projects } =
+    useProjects()
 </script>
 
 <template>
@@ -55,49 +18,67 @@
     <main
       class="text-secondary-50 relative flex w-full items-center justify-center px-20 max-lg:gap-6 max-md:pt-36 max-md:pb-28"
     >
-      <section class="flex w-full flex-col items-center">
-        <img
-          src="https://avatars.githubusercontent.com/u/101468533?v=4"
-          class="h-32 w-32 rounded-full lg:h-40 lg:w-40"
-        />
-        <h1 class="pt-10 text-3xl font-bold">David Silva</h1>
-        <h2 class="text-secondary-100 font-[Poppins] text-xl font-medium">
-          {{ t('job') }}
-        </h2>
-        <p
-          class="text-secondary-50 flex items-center gap-2 pt-3 font-[Poppins] font-medium"
-        >
-          <MapPinIcon class="w-5" /> {{ t('location') }}
-        </p>
-        <button
-          class="ring-secondary-50 hover:shadow-secondary-50/20 mt-6 h-10 w-52 rounded-md ring-1 transition-all hover:shadow-lg"
-        >
-          <a
-            class="flex h-full w-full items-center justify-center gap-2 text-sm font-semibold"
-            href="https://github.com/davsilvam"
-            target="_blank"
-          >
-            <IconGitHub class="w-4" />
-            Ir ao GitHub
-          </a>
-        </button>
-      </section>
       <section class="flex w-full items-center justify-center">
         <div
-          class="grid h-[556px] w-fit grid-cols-2 grid-rows-2 place-items-center gap-x-4"
+          class="relative grid w-fit grid-cols-2 grid-rows-3 flex-col place-items-center gap-x-4 max-md:flex max-md:gap-y-4 md:h-[546px] md:grid-rows-2"
         >
           <ProjectCard
             class="col-span-1 col-start-1 row-span-1"
-            :project="topProjects[0]"
+            :project="projects[currentPage][0]"
           />
           <ProjectCard
-            class="col-span-1 col-start-2 row-span-2"
-            :project="topProjects[1]"
+            class="col-span-1 col-start-2 max-md:row-start-2 md:row-span-2"
+            :project="projects[currentPage][1]"
           />
           <ProjectCard
-            class="col-span-1 col-start-1 row-span-1 row-start-2"
-            :project="topProjects[2]"
+            v-if="currentPage === 0"
+            class="col-span-1 col-start-1 row-span-1 row-start-2 max-md:row-start-3"
+            :project="projects[currentPage][2]"
           />
+          <a
+            v-else
+            class="border-secondary-800 hover:border-secondary-50 flex h-64 w-64 items-center justify-center gap-2 rounded-md border-2 p-4 hover:translate-y-1"
+            href="https://github.com/davsilvam/repos"
+            target="_blank"
+          >
+            <span class="font-semibold">Visitar GitHub</span>
+            <IconGitHub class="w-4" />
+          </a>
+          <nav
+            class="absolute bottom-5 flex items-center gap-2 text-lg font-medium max-md:hidden md:right-5"
+          >
+            <button
+              v-if="currentPage !== 0"
+              @click="goToPreviousPage"
+              class="hover:bg-secondary-800 rounded-full p-2"
+            >
+              <ChevronLeftIcon class="w-5" />
+            </button>
+            <p>{{ currentPage + 1 }}</p>
+            <button
+              v-if="currentPage === 0"
+              @click="goToNextPage"
+              class="hover:bg-secondary-800 rounded-full p-2"
+            >
+              <ChevronRightIcon class="w-5" />
+            </button>
+          </nav>
+          <button
+            v-if="currentPage === 0"
+            @click="goToNextPage"
+            class="text-secondary-50 border-secondary-50 flex w-full items-center justify-center gap-1 rounded-md border-2 py-3 font-semibold md:hidden"
+          >
+            Próxima Página
+            <ChevronRightIcon class="w-4" />
+          </button>
+          <button
+            v-else
+            @click="goToPreviousPage"
+            class="text-secondary-50 border-secondary-50 flex w-full items-center justify-center gap-1 rounded-md border-2 py-3 font-semibold md:hidden"
+          >
+            <ChevronLeftIcon class="w-4" />
+            Página Anterior
+          </button>
         </div>
       </section>
     </main>

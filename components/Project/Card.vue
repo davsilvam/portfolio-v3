@@ -39,15 +39,15 @@
       </p>
       <div class="flex gap-3">
         <a
-          class="grid place-items-center"
+          class="hover:text-secondary-300 grid place-items-center"
           :href="project.deploy_link"
           target="_blank"
         >
           <LinkIcon class="w-6" />
         </a>
-        <a :href="project.repository_link" target="_blank"
-          ><IconGitHub class="w-6"
-        /></a>
+        <a class="group" :href="project.repository_link" target="_blank">
+          <IconGitHub class="w-6" />
+        </a>
       </div>
     </footer>
   </article>
