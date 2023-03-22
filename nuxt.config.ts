@@ -21,7 +21,8 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'
         }
       ]
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
   i18n: {
