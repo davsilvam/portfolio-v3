@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import {
-    ChevronUpIcon,
     FaceSmileIcon,
     FolderOpenIcon,
     PaintBrushIcon,
@@ -8,7 +7,6 @@
   } from '@heroicons/vue/24/outline'
 
   const { t } = useLang()
-  const localePath = useLocalePath()
 </script>
 
 <template>
@@ -19,81 +17,69 @@
       <BaseOutlineTitle class="text-6xl">Hard Skills</BaseOutlineTitle>
       <ul class="grid grid-cols-2 gap-8 pt-8 md:grid-cols-4">
         <li>
-          <a
-            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-            href="https://nuxt.com"
-            target="_blank"
-          >
+          <CardHardSkill path="https://nuxt.com">
             <IconNuxt class="fill-secondary-50 w-12" />
             Nuxt 3
-          </a>
+          </CardHardSkill>
         </li>
         <li>
-          <a
-            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-            href="https://vuejs.org"
-            target="_blank"
-          >
+          <CardHardSkill path="https://vuejs.org">
             <IconVue class="w-12" />
             Vue.js
-          </a>
+          </CardHardSkill>
         </li>
         <li>
-          <a
-            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-            href="https://www.typescriptlang.org"
-            target="_blank"
-          >
+          <CardHardSkill path="https://www.typescriptlang.org">
             <IconTypeScript class="w-11" />
             TypeScript
-          </a>
+          </CardHardSkill>
         </li>
         <li>
-          <a
-            class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-            href="https://tailwindcss.com"
-            target="_blank"
-          >
+          <CardHardSkill path="https://tailwindcss.com">
             <IconTailwindCSS class="w-12" />
             TailwindCSS
-          </a>
+          </CardHardSkill>
         </li>
       </ul>
       <p class="text-secondary-200 max-w-[600px] px-8 pt-4 text-sm">
         {{ t('extra_hard_skills') }}
       </p>
     </section>
+
     <section class="flex flex-col items-center pt-5">
       <BaseOutlineTitle class="text-6xl">Soft Skills</BaseOutlineTitle>
       <ul class="grid grid-cols-2 gap-8 pt-8 max-md:pb-28 md:grid-cols-4">
-        <li
-          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-        >
-          <FolderOpenIcon class="w-12" />{{ t('organized') }}
+        <li>
+          <CardSoftSkill>
+            <FolderOpenIcon class="w-12" />{{ t('organized') }}
+          </CardSoftSkill>
         </li>
-        <li
-          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-        >
-          <FaceSmileIcon class="w-12" />{{ t('positive') }}
+        <li>
+          <CardSoftSkill>
+            <FaceSmileIcon class="w-12" />{{ t('positive') }}
+          </CardSoftSkill>
         </li>
-        <li
-          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-        >
-          <PaintBrushIcon class="w-12" />{{ t('creative') }}
+        <li>
+          <CardSoftSkill>
+            <PaintBrushIcon class="w-12" />{{ t('creative') }}
+          </CardSoftSkill>
         </li>
-        <li
-          class="hover:bg-secondary-800 flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-md font-semibold"
-        >
-          <RocketLaunchIcon class="w-12" />{{ t('flexible') }}
+        <li>
+          <CardSoftSkill>
+            <RocketLaunchIcon class="w-12" />{{ t('flexible') }}
+          </CardSoftSkill>
         </li>
       </ul>
     </section>
-    <NuxtLink
-      :to="localePath('/')"
-      class="text-secondary-50 absolute top-10 z-20 hidden flex-col items-center align-middle text-lg font-semibold uppercase md:flex"
-    >
-      <ChevronUpIcon class="w-6" />
-      {{ t('home_page') }}
-    </NuxtLink>
+
+    <NavigationLink name="home_page" direction="top" path="/" />
   </div>
 </template>
+
+<style scoped>
+  section:has(.card:hover) .card:not(:hover) {
+    opacity: 0.6;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+  }
+</style>

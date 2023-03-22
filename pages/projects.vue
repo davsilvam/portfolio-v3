@@ -1,12 +1,6 @@
 <script lang="ts" setup>
-  import {
-    ChevronDownIcon,
-    ChevronLeftIcon,
-    ChevronRightIcon
-  } from '@heroicons/vue/24/outline'
+  import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/24/outline'
 
-  const { t } = useLang()
-  const localePath = useLocalePath()
   const { currentPage, goToNextPage, goToPreviousPage, projects } =
     useProjects()
 </script>
@@ -35,6 +29,7 @@
             class="col-span-1 col-start-1 row-span-1 row-start-2 max-md:row-start-3"
             :project="projects[currentPage][2]"
           />
+
           <a
             v-else
             class="border-secondary-800 hover:border-secondary-50 flex h-64 w-64 items-center justify-center gap-2 rounded-md border-2 p-4 hover:translate-y-1"
@@ -44,6 +39,7 @@
             <span class="font-semibold">Visitar GitHub</span>
             <IconGitHub class="w-4" />
           </a>
+
           <nav
             class="absolute bottom-5 flex items-center gap-2 text-lg font-medium max-md:hidden md:right-5"
           >
@@ -63,6 +59,7 @@
               <ChevronRightIcon class="w-5" />
             </button>
           </nav>
+
           <button
             v-if="currentPage === 0"
             @click="goToNextPage"
@@ -71,6 +68,7 @@
             Próxima Página
             <ChevronRightIcon class="w-4" />
           </button>
+
           <button
             v-else
             @click="goToPreviousPage"
@@ -82,12 +80,7 @@
         </div>
       </section>
     </main>
-    <NuxtLink
-      :to="localePath('/')"
-      class="absolute hidden w-36 -translate-x-12 rotate-90 flex-col items-center text-lg font-semibold uppercase md:left-10 md:flex"
-    >
-      {{ t('home_page') }}
-      <ChevronDownIcon class="w-6" />
-    </NuxtLink>
+
+    <NavigationLink name="home_page" direction="left" path="/" />
   </div>
 </template>

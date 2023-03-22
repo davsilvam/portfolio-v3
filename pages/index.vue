@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-  import { ChevronDownIcon } from '@heroicons/vue/24/outline'
-
   const { t } = useLang()
-  const localePath = useLocalePath()
 </script>
 
 <template>
@@ -18,46 +15,23 @@
           {{ t('job') }}
         </BaseOutlineTitle>
         <ul
-          class="flex items-center justify-center gap-6 font-[Poppins] text-lg font-medium md:gap-12 pt-4"
+          class="flex items-center justify-center gap-6 pt-4 font-[Poppins] text-lg font-medium md:gap-12"
         >
           <li>
-            <h3>
-              {{ t('updated') }}
-            </h3>
+            {{ t('updated') }}
           </li>
           <li>
-            <h3>
-              {{ t('simple') }}
-            </h3>
+            {{ t('simple') }}
           </li>
           <li>
-            <h3>
-              {{ t('organized') }}
-            </h3>
+            {{ t('organized') }}
           </li>
         </ul>
       </div>
     </main>
-    <NuxtLink
-      :to="localePath('/skills')"
-      class="absolute bottom-5 hidden flex-col items-center text-lg font-semibold uppercase md:flex lg:bottom-10"
-    >
-      {{ t('skills') }}
-      <ChevronDownIcon class="w-6" />
-    </NuxtLink>
-    <NuxtLink
-      :to="localePath('/about-me')"
-      class="absolute left-5 hidden w-36 -translate-x-12 rotate-90 flex-col items-center text-lg font-semibold uppercase md:flex lg:left-10"
-    >
-      {{ t('about_me') }}
-      <ChevronDownIcon class="w-6" />
-    </NuxtLink>
-    <NuxtLink
-      :to="localePath('/projects')"
-      class="absolute right-5 hidden w-36 translate-x-12 -rotate-90 flex-col items-center text-lg font-semibold uppercase md:flex lg:right-10"
-    >
-      {{ t('projects') }}
-      <ChevronDownIcon class="w-6" />
-    </NuxtLink>
+
+    <NavigationLink name="skills" direction="bottom" path="/skills" />
+    <NavigationLink name="about_me" direction="left" path="/about-me" />
+    <NavigationLink name="projects" direction="right" path="/projects" />
   </div>
 </template>

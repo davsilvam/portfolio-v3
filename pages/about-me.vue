@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-  import { ChevronDownIcon } from '@heroicons/vue/24/outline'
-
   const { t } = useLang()
-  const localePath = useLocalePath()
 </script>
 
 <template>
@@ -26,6 +23,7 @@
           {{ t('presentation_subtitle') }}
         </h3>
       </section>
+
       <section
         class="col-span-10 col-start-2 flex w-full flex-col gap-3 font-[Poppins] md:col-span-8 md:col-start-2 lg:col-span-4 lg:col-start-7"
       >
@@ -34,12 +32,7 @@
         <p>{{ t('presentation_3') }}</p>
       </section>
     </main>
-    <NuxtLink
-      :to="localePath('/')"
-      class="absolute hidden w-36 translate-x-12 -rotate-90 flex-col items-center text-lg font-semibold uppercase md:right-10 md:flex"
-    >
-      {{ t('home_page') }}
-      <ChevronDownIcon class="w-6" />
-    </NuxtLink>
+
+    <NavigationLink name="home_page" direction="right" path="/" />
   </div>
 </template>
