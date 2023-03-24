@@ -37,7 +37,6 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 - [NuxtImage](https://v1.image.nuxtjs.org)
 - [i18n](https://v8.i18n.nuxtjs.org)
 - [Node e NPM](https://nodejs.org/)
-- [Vite](https://vitejs.dev/)
 
 ### :art: **Estilização**
 
