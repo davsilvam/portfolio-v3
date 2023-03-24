@@ -82,7 +82,7 @@ npm run build
 
 ## :balance_scale: **Licença**
 
-Esse projeto está sob a [licença MIT](https://github.com/davsilvam/portfolio-v3/blob/main/LICENSE.md).
+Esse projeto está sob a [licença MIT](https://github.com/davsilvam/portfolio-v3/blob/main/LICENSE).
 
 <p align="center">
   Feito com :white_heart: por <a href="https://www.linkedin.com/in/davsilvam/">David Silva</a>.
