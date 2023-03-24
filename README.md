@@ -10,6 +10,12 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 
 ## :art: **Visual do Projeto**
 
+### _Protótipo_
+
+<div align="center">
+    <img src="./.github/prototype.png" style="width: 100%">
+</div>
+
 ### _Desktop e Telas Maiores_
 
 <div align="center">
