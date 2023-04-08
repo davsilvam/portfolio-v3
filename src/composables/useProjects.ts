@@ -8,8 +8,9 @@ export interface Project {
   repository_link: string
 }
 
-export default function () {
-  const currentPage = ref<number>(0)
+export function useProjects() {
+  const currentPage = useState<number>('currentPage', () => 0)
+
   const projects: Project[][] = [
     [
       {

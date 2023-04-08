@@ -1,15 +1,6 @@
 <script lang="ts" setup>
   import { LinkIcon } from '@heroicons/vue/20/solid'
-
-  interface Project {
-    name: string
-    category: string
-    description: string
-    image_url: string
-    language: string
-    deploy_link: string
-    repository_link: string
-  }
+  import { Project } from '../../composables/useProjects'
 
   defineProps<{
     project: Project

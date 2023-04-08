@@ -71,8 +71,6 @@
         </li>
       </ul>
     </section>
-
-    <NavigationLink name="home_page" direction="top" path="/" />
   </div>
 </template>
 

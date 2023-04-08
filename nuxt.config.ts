@@ -1,29 +1,14 @@
+import { fileURLToPath } from 'url'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  alias: {
+    '@': fileURLToPath(new URL('./', import.meta.url))
+  },
   app: {
-    head: {
-      link: [
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.googleapis.com'
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: 'anonymous'
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'
-        }
-      ]
-    },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+  srcDir: 'src/',
   modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
   i18n: {
     locales: [
@@ -50,6 +35,6 @@ export default defineNuxtConfig({
     }
   },
   tailwindcss: {
-    cssPath: '~/styles/tailwind.css'
+    cssPath: './styles/global.css'
   }
 })

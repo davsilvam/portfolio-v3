@@ -1,8 +1,5 @@
 {
   "job": "Front-end Developer",
-  "updated": "Updated",
-  "simple": "Simple",
-  "organized": "Organized",
 
   "about_me": "About Me",
   "skills": "Skills",
@@ -16,6 +13,7 @@
   "presentation_3": "I'm self-taught, I strive to build my own projects and explore modern tools. I also like to learn with people who pass on solid and valuable knowledge.",
 
   "extra_hard_skills": "Furthermore, I have knowledge in technologies such as: Pinia, Prisma, Back-end as a Service or BaaS (Firebase and Supabase), React, Radix UI, Styled Components, Sass.",
+  "organized": "Organized",
   "positive": "Positive",
   "creative": "Creative",
   "flexible": "Flexible",

@@ -4,6 +4,7 @@ export interface ILocales {
     name: string
   }
 }
+
 export const locales: ILocales = {
   'pt-BR': {
     code: 'pt-BR',

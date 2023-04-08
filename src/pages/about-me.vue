@@ -30,26 +30,20 @@
         <p>{{ t('presentation_1') }}</p>
         <p>{{ t('presentation_2') }}</p>
         <p>{{ t('presentation_3') }}</p>
-        <ul class="flex items-center gap-6 pt-4">
+
+        <ul class="flex flex-wrap items-center gap-8 pt-4">
           <li>
-            <a href="https://github.com/davsilvam" target="_blank">
-              <IconGitHub class="w-10" />
-            </a>
+            <SocialLink url="https://github.com/davsilvam">
+              <IconGitHub class="w-5" /> <span>GitHub</span>
+            </SocialLink>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/davsilvam" target="_blank">
-              <IconLinkedin class="w-10" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/davsilvam_/" target="_blank">
-              <IconInstagram class="w-10" />
-            </a>
+            <SocialLink url="https://www.linkedin.com/in/davsilvam">
+              <IconLinkedin class="w-5" /> <span>Linkedin</span>
+            </SocialLink>
           </li>
         </ul>
       </section>
     </main>
-
-    <NavigationLink name="home_page" direction="right" path="/" />
   </div>
 </template>
