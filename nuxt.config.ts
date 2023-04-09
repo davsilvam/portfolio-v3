@@ -10,6 +10,15 @@ export default defineNuxtConfig({
   },
   srcDir: 'src/',
   modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
+  tailwindcss: {
+    cssPath: './styles/global.css'
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
   i18n: {
     locales: [
       {
@@ -33,8 +42,5 @@ export default defineNuxtConfig({
       fallbackLocale: 'pt-BR',
       availableLocales: ['pt-BR', 'en-US']
     }
-  },
-  tailwindcss: {
-    cssPath: './styles/global.css'
   }
 })

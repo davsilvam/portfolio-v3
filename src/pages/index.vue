@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import { ChevronRightIcon } from '@heroicons/vue/24/outline'
+
   const { t } = useLang()
   const localePath = useLocalePath()
 </script>
@@ -16,20 +17,22 @@
           <h3 class="pl-0.5 text-lg font-semibold md:pl-1.5">Oi, eu sou o</h3>
           <hr class="border-secondary-50 w-56" />
         </div>
-        <h1 class="text-5xl font-bold md:text-8xl">David Silva</h1>
+        <h1 class="font-italiana text-5xl font-bold md:text-8xl">
+          David Silva
+        </h1>
         <BaseOutlineTitle
           class="pl-0.5 pt-2 text-4xl max-sm:w-[80%] md:pl-1.5 md:text-5xl"
         >
           {{ t('job') }}
         </BaseOutlineTitle>
 
-        <button
-          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-10 flex items-center gap-2 rounded-md px-5 py-3 font-semibold hover:shadow-lg"
-          @click="() => $router.push(localePath('/projects'))"
+        <NuxtLink
+          :to="localePath('/projects')"
+          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-10 flex items-center gap-2 rounded-md px-5 py-3 font-semibold transition-shadow hover:shadow-lg"
         >
           Conheça meu trabalho
           <ChevronRightIcon class="w-4" />
-        </button>
+        </NuxtLink>
       </div>
     </main>
   </div>

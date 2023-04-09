@@ -1,6 +1,5 @@
 <template>
   <Head>
-    <Title> David Silva </Title>
     <Link rel="preconnect" href="https://fonts.googleapis.com" />
     <Link
       rel="preconnect"
@@ -8,13 +7,10 @@
       crossOrigin="anonymous"
     />
     <Link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Italiana&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
-    <Link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    />
+    <Title> David Silva </Title>
   </Head>
 
   <div class="bg-secondary-900">

@@ -19,19 +19,19 @@
           {{ t('who_is') }}
         </BaseOutlineTitle>
         <h2 class="text-6xl font-bold uppercase lg:text-8xl">David?</h2>
-        <h3 class="text-secondary-100 pt-3 pl-1 font-[Poppins] max-lg:hidden">
+        <h3 class="text-secondary-100 pt-3 pl-1 max-lg:hidden">
           {{ t('presentation_subtitle') }}
         </h3>
       </section>
 
       <section
-        class="col-span-10 col-start-2 flex w-full flex-col gap-3 font-[Poppins] md:col-span-8 md:col-start-2 lg:col-span-4 lg:col-start-7 lg:items-end"
+        class="col-span-10 col-start-2 flex w-full flex-col gap-3 md:col-span-8 md:col-start-2 lg:col-span-4 lg:col-start-7 lg:items-start"
       >
         <p>{{ t('presentation_1') }}</p>
         <p>{{ t('presentation_2') }}</p>
         <p>{{ t('presentation_3') }}</p>
 
-        <ul class="flex flex-wrap items-center gap-8 pt-4">
+        <ul class="flex flex-wrap items-center gap-8 pt-4 self-end">
           <li>
             <SocialLink url="https://github.com/davsilvam">
               <IconGitHub class="w-5" /> <span>GitHub</span>
