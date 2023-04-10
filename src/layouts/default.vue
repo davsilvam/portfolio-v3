@@ -1,8 +1,7 @@
 <template>
-  <div class="flex min-h-screen flex-col items-start md:h-screen">
+  <div class="flex min-h-screen flex-col items-start">
     <AppHeader />
     <slot></slot>
     <AppMobileNavbar />
-    <AppFooter />
   </div>
 </template>

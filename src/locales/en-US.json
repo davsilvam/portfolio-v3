@@ -1,5 +1,7 @@
 {
+  "hi": "Hi, I'm",
   "job": "Front-end Developer",
+  "know_my_work": "Get to know my work",
 
   "about_me": "About Me",
   "skills": "Skills",
@@ -12,11 +14,5 @@
   "presentation_2": "Currently I course Systems e Digital Medias at Federal University of Ceará (UFC).",
   "presentation_3": "I'm self-taught, I strive to build my own projects and explore modern tools. I also like to learn with people who pass on solid and valuable knowledge.",
 
-  "extra_hard_skills": "Furthermore, I have knowledge in technologies such as: Pinia, Prisma, Back-end as a Service or BaaS (Firebase and Supabase), React, Radix UI, Styled Components, Sass.",
-  "organized": "Organized",
-  "positive": "Positive",
-  "creative": "Creative",
-  "flexible": "Flexible",
-
-  "location": "Fortaleza, CE - Brazil"
+  "extra_skills": "Furthermore, I have knowledge in technologies such as: Pinia, Prisma, Back-end as a Service or BaaS (Firebase and Supabase), React, Radix UI, Styled Components, Sass."
 }

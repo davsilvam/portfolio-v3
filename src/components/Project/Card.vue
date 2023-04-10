@@ -9,16 +9,18 @@
 
 <template>
   <article
-    class="bg-secondary-800 flex h-40 w-full flex-col justify-between p-5"
+    class="bg-secondary-800 flex w-full flex-col justify-between gap-10 p-8"
   >
     <div class="flex flex-col">
-      <h2 class="text-secondary-100 text-sm">
-        {{ project.category }}
-      </h2>
-      <h1 class="text-secondary-50 text-lg font-semibold">
+      <nuxt-img
+        class="mb-5 h-10 w-fit"
+        :src="project.image_url"
+        :alt="`${project.name} logo.`"
+      />
+      <h1 class="text-secondary-50 font-italiana text-xl font-bold">
         {{ project.name }}
       </h1>
-      <p class="text-secondary-300 pt-1 text-xs">
+      <p class="text-secondary-200 pt-1 text-sm">
         {{ project.description }}
       </p>
     </div>

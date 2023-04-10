@@ -11,66 +11,18 @@
 
 <template>
   <div
-    class="text-secondary-50 relative flex min-h-full w-full flex-col items-center justify-center"
+    class="text-secondary-50 relative flex min-h-full w-full flex-col items-center justify-center md:mt-52"
   >
-    <section class="flex flex-col items-center max-md:mt-28">
-      <BaseOutlineTitle class="text-6xl">Hard Skills</BaseOutlineTitle>
-      <ul class="grid grid-cols-2 gap-8 pt-8 md:grid-cols-4">
-        <li>
-          <CardHardSkill path="https://nuxt.com">
-            <IconNuxt class="fill-secondary-50 w-12" />
-            Nuxt 3
-          </CardHardSkill>
-        </li>
-        <li>
-          <CardHardSkill path="https://vuejs.org">
-            <IconVue class="w-12" />
-            Vue.js
-          </CardHardSkill>
-        </li>
-        <li>
-          <CardHardSkill path="https://www.typescriptlang.org">
-            <IconTypeScript class="w-11" />
-            TypeScript
-          </CardHardSkill>
-        </li>
-        <li>
-          <CardHardSkill path="https://tailwindcss.com">
-            <IconTailwindCSS class="w-12" />
-            TailwindCSS
-          </CardHardSkill>
-        </li>
-      </ul>
-      <p class="text-secondary-200 max-w-[600px] px-8 pt-4 text-sm">
-        {{ t('extra_hard_skills') }}
-      </p>
-    </section>
-
-    <section class="flex flex-col items-center pt-5">
-      <BaseOutlineTitle class="text-6xl">Soft Skills</BaseOutlineTitle>
-      <ul class="grid grid-cols-2 gap-8 pt-8 max-md:pb-28 md:grid-cols-4">
-        <li>
-          <CardSoftSkill>
-            <FolderOpenIcon class="w-12" />{{ t('organized') }}
-          </CardSoftSkill>
-        </li>
-        <li>
-          <CardSoftSkill>
-            <FaceSmileIcon class="w-12" />{{ t('positive') }}
-          </CardSoftSkill>
-        </li>
-        <li>
-          <CardSoftSkill>
-            <PaintBrushIcon class="w-12" />{{ t('creative') }}
-          </CardSoftSkill>
-        </li>
-        <li>
-          <CardSoftSkill>
-            <RocketLaunchIcon class="w-12" />{{ t('flexible') }}
-          </CardSoftSkill>
-        </li>
-      </ul>
-    </section>
+    <main
+      class="text-secondary-50 relative flex h-full w-full items-start justify-end px-8 max-lg:flex-col max-lg:gap-6 max-md:pt-36 max-md:pb-28 md:px-20"
+    >
+      <h1
+        class="font-italiana top-52 left-20 pb-10 text-6xl font-bold lg:fixed lg:z-10 xl:text-7xl"
+      >
+        Habilidades
+      </h1>
+      <SkillSection />
+    </main>
   </div>
 </template>
 

@@ -14,14 +14,14 @@
     >
       <div class="flex flex-col items-start">
         <div class="flex items-center gap-3">
-          <h3 class="pl-0.5 text-lg font-semibold md:pl-1.5">Oi, eu sou o</h3>
+          <h3 class="pl-0.5 text-lg font-semibold md:pl-1.5">{{ t('hi') }}</h3>
           <hr class="border-secondary-50 w-56" />
         </div>
-        <h1 class="font-italiana text-5xl font-bold md:text-8xl">
+        <h1 class="font-italiana text-6xl font-bold md:text-8xl">
           David Silva
         </h1>
         <BaseOutlineTitle
-          class="pl-0.5 pt-2 text-4xl max-sm:w-[80%] md:pl-1.5 md:text-5xl"
+          class="pl-0.5 pt-2 text-4xl max-sm:text-3xl md:pl-1.5 md:text-5xl"
         >
           {{ t('job') }}
         </BaseOutlineTitle>
@@ -30,10 +30,11 @@
           :to="localePath('/projects')"
           class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-10 flex items-center gap-2 rounded-md px-5 py-3 font-semibold transition-shadow hover:shadow-lg"
         >
-          Conheça meu trabalho
+          {{ t('know_my_work') }}
           <ChevronRightIcon class="w-4" />
         </NuxtLink>
       </div>
     </main>
+    <AppFooter />
   </div>
 </template>
