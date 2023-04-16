@@ -25,6 +25,7 @@
         </li>
       </template>
     </SkillContainer>
+
     <SkillContainer>
       <template #title>Aprendendo</template>
       <template #skills>
@@ -34,10 +35,9 @@
         </li>
       </template>
     </SkillContainer>
-    <div>
-      <p class="text-secondary-300 text-sm">
-        {{ t('extra_skills') }}
-      </p>
-    </div>
+
+    <p class="text-secondary-300 text-sm">
+      {{ t('extra_skills') }}
+    </p>
   </section>
 </template>

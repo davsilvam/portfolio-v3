@@ -12,7 +12,7 @@
     class="bg-secondary-800 flex w-full flex-col justify-between gap-10 p-8"
   >
     <div class="flex flex-col">
-      <nuxt-img
+      <img
         class="mb-5 h-10 w-fit"
         :src="project.image_url"
         :alt="`${project.name} logo.`"
