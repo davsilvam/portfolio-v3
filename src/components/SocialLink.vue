@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { AnchorHTMLAttributes } from 'vue'
-  import { PhArrowSquareOut } from '@phosphor-icons/vue'
+  import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 
   interface SocialLinkProps extends AnchorHTMLAttributes {}
 
@@ -15,6 +15,6 @@
     v-bind="props"
   >
     <slot></slot>
-    <PhArrowSquareOut size="16" />
+    <ArrowTopRightOnSquareIcon class="w-4" />
   </a>
 </template>

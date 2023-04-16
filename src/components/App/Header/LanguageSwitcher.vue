@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { PhGlobeHemisphereWest } from '@phosphor-icons/vue'
+  import { GlobeAmericasIcon } from '@heroicons/vue/24/outline'
   import { locales } from '../../../locales'
 
   const { locale } = useI18n()
@@ -26,7 +26,7 @@
       @click="toogleTranslateMenu"
       class="hover:bg-secondary-800 text-secondary-50 flex items-center justify-center rounded-full p-3"
     >
-      <PhGlobeHemisphereWest size="24" />
+      <GlobeAmericasIcon class="w-6" />
     </button>
 
     <nav

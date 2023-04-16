@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-  import { PhHouse, PhLeaf, PhList, PhRocketLaunch } from '@phosphor-icons/vue'
+  import {
+    Bars3Icon,
+    HomeIcon,
+    RocketLaunchIcon,
+    SparklesIcon
+  } from '@heroicons/vue/24/outline'
 
   const isNavbarOpen = ref<boolean>(false)
 
@@ -25,7 +30,7 @@
       @click="toogleNavbar"
       class="text-secondary-50 border-secondary-800 flex h-20 w-full items-center justify-center gap-2 border-b font-semibold"
     >
-      <PhList size="24" /> <span>Menu</span>
+      <Bars3Icon class="w-6" /> <span>Menu</span>
     </button>
 
     <nav class="text-secondary-50 flex flex-col gap-2 px-3 py-5">
@@ -33,7 +38,7 @@
         :to="localePath('/')"
         class="hover:bg-secondary-800 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
       >
-        <PhHouse size="20" />
+        <HomeIcon class="w-5" />
         <span>{{ t('home_page') }}</span>
       </NuxtLink>
 
@@ -41,7 +46,7 @@
         :to="localePath('/projects')"
         class="hover:bg-secondary-800 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
       >
-        <PhRocketLaunch size="20" />
+        <RocketLaunchIcon class="w-5" />
         <span>{{ t('projects') }}</span>
       </NuxtLink>
 
@@ -49,7 +54,7 @@
         :to="localePath('/skills')"
         class="hover:bg-secondary-800 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
       >
-        <PhLeaf size="20" />
+        <SparklesIcon class="w-5" />
         <span>{{ t('skills') }}</span>
       </NuxtLink>
 

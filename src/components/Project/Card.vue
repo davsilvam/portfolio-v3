@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { PhArrowSquareOut } from '@phosphor-icons/vue'
+  import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
   import { Project } from '../../composables/useProjects'
 
   defineProps<{
@@ -37,11 +37,11 @@
         </a>
 
         <a
-          class="hover:text-secondary-300 grid place-items-center"
+          class="hover:text-secondary-300 text-secondary-50 grid place-items-center"
           :href="project.deploy_link"
           target="_blank"
         >
-          <PhArrowSquareOut size="20" />
+          <ArrowTopRightOnSquareIcon class="w-5" />
         </a>
       </div>
     </footer>

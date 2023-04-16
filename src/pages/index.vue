@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { PhCaretRight } from '@phosphor-icons/vue'
+  import { ChevronRightIcon } from '@heroicons/vue/20/solid'
 
   const { t } = useLang()
   const localePath = useLocalePath()
@@ -28,10 +28,10 @@
 
         <NuxtLink
           :to="localePath('/projects')"
-          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-6 flex items-center gap-2 rounded px-5 py-3 text-sm font-semibold transition-shadow hover:shadow-lg"
+          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-6 flex items-center gap-1 rounded px-5 py-3 text-sm font-semibold transition-shadow hover:shadow-lg"
         >
           <span>{{ t('know_my_work') }}</span>
-          <PhCaretRight size="12" weight="bold" />
+          <ChevronRightIcon class="w-5" />
         </NuxtLink>
       </div>
     </main>
