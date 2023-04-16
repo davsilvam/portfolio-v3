@@ -1,22 +1,20 @@
 <script lang="ts" setup>
-  import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
   import { AnchorHTMLAttributes } from 'vue'
+  import { PhArrowSquareOut } from '@phosphor-icons/vue'
 
-  interface SocialLinkProps extends AnchorHTMLAttributes {
-    url: string
-  }
+  interface SocialLinkProps extends AnchorHTMLAttributes {}
 
   const props = defineProps<SocialLinkProps>()
 </script>
 
 <template>
   <a
-    class="flex items-center gap-2 text-sm"
-    :href="url"
+    class="hover:bg-secondary-800 flex items-center justify-center gap-3 rounded py-1 px-3 text-sm font-semibold transition-colors"
+    href="url"
     target="_blank"
     v-bind="props"
   >
     <slot></slot>
-    <ArrowTopRightOnSquareIcon class="w-4" />
+    <PhArrowSquareOut size="16" />
   </a>
 </template>

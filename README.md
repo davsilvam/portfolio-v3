@@ -41,7 +41,7 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 ### :art: **Estilização**
 
 - [Tailwind CSS](https://tailwindcss.com)
-- [Heroicons](https://heroicons.com)
+- [Phosphor Icons](https://phosphoricons.com)
 - [Google Fonts](https://fonts.google.com)
 
 ### :open_file_folder: **IDE, Versionamento e Deploy**

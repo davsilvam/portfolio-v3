@@ -16,6 +16,6 @@
     "prettier-plugin-tailwindcss": "^0.2.5"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.0.16"
+    "@phosphor-icons/vue": "^2.0.1"
   }
 }

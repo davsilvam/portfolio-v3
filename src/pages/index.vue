@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { ChevronRightIcon } from '@heroicons/vue/24/outline'
+  import { PhCaretRight } from '@phosphor-icons/vue'
 
   const { t } = useLang()
   const localePath = useLocalePath()
@@ -14,24 +14,24 @@
     >
       <div class="flex flex-col items-start">
         <div class="flex items-center gap-3">
-          <h3 class="pl-0.5 text-lg font-semibold md:pl-1.5">{{ t('hi') }}</h3>
-          <hr class="border-secondary-50 w-56" />
+          <h3 class="text-lg font-semibold">{{ t('hi') }}</h3>
+          <hr class="border-secondary-50 w-56 flex-1 max-md:w-48" />
         </div>
+
         <h1 class="font-italiana text-6xl font-bold md:text-8xl">
           David Silva
         </h1>
-        <BaseOutlineTitle
-          class="pl-0.5 pt-2 text-4xl max-sm:text-3xl md:pl-1.5 md:text-5xl"
-        >
-          {{ t('job') }}
-        </BaseOutlineTitle>
+
+        <p class="mt-3 max-w-3xl text-sm">
+          {{ t('presentation') }}
+        </p>
 
         <NuxtLink
           :to="localePath('/projects')"
-          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-10 flex items-center gap-2 rounded-md px-5 py-3 font-semibold transition-shadow hover:shadow-lg"
+          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-6 flex items-center gap-2 rounded px-5 py-3 text-sm font-semibold transition-shadow hover:shadow-lg"
         >
-          {{ t('know_my_work') }}
-          <ChevronRightIcon class="w-4" />
+          <span>{{ t('know_my_work') }}</span>
+          <PhCaretRight size="12" weight="bold" />
         </NuxtLink>
       </div>
     </main>

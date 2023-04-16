@@ -4,9 +4,9 @@
   >
     <nuxt-img class="h-6" src="/logo.png" alt="David's Logo" />
 
-    <nav class="flex items-center gap-20">
+    <div class="flex items-center gap-10">
       <AppHeaderNavigationContainer />
       <AppHeaderLanguageSwitcher />
-    </nav>
+    </div>
   </header>
 </template>

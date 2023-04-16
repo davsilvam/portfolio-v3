@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { PhGlobeHemisphereWest } from '@phosphor-icons/vue'
   import { locales } from '../../../locales'
 
   const { locale } = useI18n()
@@ -23,10 +24,11 @@
   <div class="relative">
     <button
       @click="toogleTranslateMenu"
-      class="hover:bg-secondary-800 ring-secondary-50 flex h-12 w-12 items-center justify-center rounded-full hover:ring-2"
+      class="hover:bg-secondary-800 text-secondary-50 flex items-center justify-center rounded-full p-3"
     >
-      <IconLanguage class="w-5" />
+      <PhGlobeHemisphereWest size="24" />
     </button>
+
     <nav
       v-if="isTranslateMenuOpen"
       class="text-secondary-50 bg-secondary-800 absolute right-2 mt-3 flex w-40 flex-col rounded-md py-3 text-right"

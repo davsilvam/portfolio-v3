@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Italiana&display=swap"
       rel="stylesheet"
     />
-    <Title> David Silva </Title>
+    <Title>David Silva</Title>
   </Head>
 
   <div class="bg-secondary-900">
@@ -29,5 +29,14 @@
   .page-enter-from,
   .page-leave-to {
     opacity: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.2rem;
+    @apply bg-secondary-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-700;
   }
 </style>

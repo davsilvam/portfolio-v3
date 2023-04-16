@@ -14,7 +14,7 @@
   <NuxtLink
     active-class="active-class"
     :to="localePath(path)"
-    class="text-secondary-400 font-semibold transition-colors"
+    class="text-secondary-400 hover:text-secondary-200 font-semibold transition-colors"
   >
     {{ t(name) }}
   </NuxtLink>

@@ -12,14 +12,6 @@
         :project="project"
         :key="project.name"
       />
-
-      <a
-        class="border-secondary-700 flex h-40 w-full items-center justify-center gap-2 border p-5 font-semibold"
-        href="https://github.com/davsilvam"
-        target="_blank"
-      >
-        Visitar GitHub <IconGitHub class="w-5" />
-      </a>
     </div>
   </section>
 </template>
