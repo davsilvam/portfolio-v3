@@ -10,12 +10,6 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 
 ## :art: **Visual do Projeto**
 
-### _Protótipo_
-
-<div align="center">
-    <img src="./.github/prototype.png" style="width: 100%">
-</div>
-
 ### _Desktop e Telas Maiores_
 
 <div align="center">
@@ -36,7 +30,6 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 - [Nuxt 3](https://nuxt.com)
 - [NuxtImage](https://v1.image.nuxtjs.org)
 - [i18n](https://v8.i18n.nuxtjs.org)
-- [Node e NPM](https://nodejs.org/)
 
 ### :art: **Estilização**
 
@@ -53,29 +46,23 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 
 ## :rocket: **Configurações e Instalação**
 
-Veja [documentação de configuração do Nuxt 3](https://nuxt.com/docs/getting-started/introduction).
+### Requisitos
 
-### **Clonando o Projeto**
+- [Node e NPM](https://nodejs.org/)
+
+Recomendo que veja a [documentação de configuração do Nuxt 3](https://nuxt.com/docs/getting-started/introduction).
 
 ```sh
+# Clonando o projeto
 git clone https://github.com/davsilvam/portfolio-v3.git
-```
 
-### **Executando o Projeto**
-
-```sh
+# Instalando as dependências
 npm install
-```
 
-### **Compilar e abrir o programa para desenvolvimento**
-
-```sh
+# Compilar e abrir o programa para desenvolvimento
 npm run dev
-```
 
-### **Compilar e reduzir para produção**
-
-```sh
+# Compilar e minificar para produção
 npm run build
 ```
 

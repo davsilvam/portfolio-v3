@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+  const { t } = useLang()
+</script>
+
 <template>
   <div
     class="text-secondary-50 relative flex min-h-full w-full flex-col items-center justify-center md:mt-52"
@@ -8,7 +12,7 @@
       <h1
         class="font-italiana top-52 left-20 pb-10 text-6xl font-bold lg:fixed lg:z-10 xl:text-8xl"
       >
-        Tecnologias
+        {{ t('skills') }}
       </h1>
 
       <SkillSection />

@@ -1,13 +1,17 @@
 {
-  "hi": "Hi, I'm",
+  "hi": "Hey, I'm",
+  "presentation": "I'm a Front-end Web Developer and currently I course Systems e Digital Medias at Federal University of Ceará (UFC). I'm self-taught, I strive to build my own projects and explore modern tools. I also like to learn with people who pass on solid and valuable knowledge.",
   "know_my_work": "Get to know my work",
 
+  "home_page": "Home Page",
   "skills": "Skills",
   "projects": "Projects",
-  "home_page": "Home Page",
 
-  "who_is": "Who is",
-  "presentation": "I'm a Front-end Web Developer and currently I course Systems e Digital Medias at Federal University of Ceará (UFC). I'm self-taught, I strive to build my own projects and explore modern tools. I also like to learn with people who pass on solid and valuable knowledge.",
+  "a_little": "A little about my",
+  "projects_about": "As a Front-end Developer, I use to build solutions to real world problems. I'm accustomed to create systems with CRUD, Landing Pages and consume external APIs. I like to build projects that give freedom to the user, with multiple features and modern and elegant interfaces.",
+  "github_cta": "You can also visit my GitHub to see more projects:",
 
+  "development": "Development",
+  "learning": "Learning",
   "extra_skills": "Furthermore, I have knowledge in technologies such as: Pinia, Prisma, Back-end as a Service or BaaS (Firebase and Supabase), React, Radix UI, Styled Components, Sass."
 }

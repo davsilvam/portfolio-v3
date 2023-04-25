@@ -13,13 +13,15 @@
       class="flex h-full w-full items-center justify-start px-8 md:px-16 lg:px-32 xl:px-52"
     >
       <div class="flex flex-col items-start">
-        <div class="flex items-center gap-3">
-          <h3 class="text-lg font-semibold">{{ t('hi') }}</h3>
-          <hr class="border-secondary-50 w-56 flex-1 max-md:w-48" />
-        </div>
+        <h1>
+          <div class="flex items-center gap-3">
+            <span class="text-lg font-semibold">{{ t('hi') }}</span>
+            <hr class="border-secondary-50 w-56 flex-1 max-md:w-48" />
+          </div>
 
-        <h1 class="font-italiana text-6xl font-bold md:text-8xl">
-          David Silva
+          <strong class="font-italiana text-6xl font-bold md:text-8xl">
+            David Silva
+          </strong>
         </h1>
 
         <p class="mt-3 max-w-3xl text-sm">
@@ -35,6 +37,7 @@
         </NuxtLink>
       </div>
     </main>
+
     <AppFooter />
   </div>
 </template>

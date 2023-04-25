@@ -5,7 +5,7 @@
 <template>
   <section class="flex w-full flex-col lg:w-1/2">
     <SkillContainer>
-      <template #title>Desenvolvimento</template>
+      <template #title>{{ t('development') }}</template>
       <template #skills>
         <li>
           <IconNuxt class="fill-secondary-50 h-6 w-fit" />
@@ -27,7 +27,7 @@
     </SkillContainer>
 
     <SkillContainer>
-      <template #title>Aprendendo</template>
+      <template #title>{{ t('learning') }}</template>
       <template #skills>
         <li>
           <IconPrisma class="fill-secondary-50 h-6 w-fit" />
