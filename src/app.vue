@@ -36,10 +36,10 @@
 
   ::-webkit-scrollbar {
     width: 0.2rem;
-    @apply bg-secondary-800;
+    @apply bg-night;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-secondary-700;
+    @apply bg-dawn/30;
   }
 </style>
