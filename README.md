@@ -28,13 +28,11 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 
 - [TypeScript](https://www.typescriptlang.org)
 - [Nuxt 3](https://nuxt.com)
-- [NuxtImage](https://v1.image.nuxtjs.org)
-- [i18n](https://v8.i18n.nuxtjs.org)
 
 ### :art: **Estilização**
 
 - [Tailwind CSS](https://tailwindcss.com)
-- [Phosphor Icons](https://phosphoricons.com)
+- [Lucide Icons](https://lucide.dev)
 - [Google Fonts](https://fonts.google.com)
 
 ### :open_file_folder: **IDE, Versionamento e Deploy**
