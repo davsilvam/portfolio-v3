@@ -1,22 +1,20 @@
 <script lang="ts" setup>
-  import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-
-  const { t } = useLang()
-  const localePath = useLocalePath()
+  import { ArrowUpRight } from 'lucide-vue-next'
 </script>
 
 <template>
   <div
-    class="text-secondary-50 relative flex h-screen w-full items-center justify-center"
+    class="text-zenith relative flex h-screen w-full items-center justify-center"
   >
     <main
       class="flex h-full w-full items-center justify-start px-8 md:px-16 lg:px-32 xl:px-52"
     >
-      <div class="flex flex-col items-start">
+      <div class="flex flex-col items-start gap-4">
         <h1>
           <div class="flex items-center gap-3">
-            <span class="text-lg font-semibold">{{ t('hi') }}</span>
-            <hr class="border-secondary-50 w-56 flex-1 max-md:w-48" />
+            <span class="text-lg font-semibold">Opa, eu sou o</span>
+
+            <hr class="bg-zenith w-56 flex-1 max-md:w-48" />
           </div>
 
           <strong class="font-italiana text-6xl font-bold md:text-8xl">
@@ -24,17 +22,39 @@
           </strong>
         </h1>
 
-        <p class="mt-3 max-w-3xl text-sm">
-          {{ t('presentation') }}
+        <p class="text-dawn mb-5 max-w-3xl text-sm font-medium leading-loose">
+          Sou
+          <span class="text-zenith">Desenvolvedor Web Front-end</span>
+          e atualmente curso
+          <a
+            class="text-zenith border-dawn hover:border-zenith border-b pb-0.5 transition-colors"
+            href="https://smd.ufc.br/pt/"
+            target="_blank"
+          >
+            Sistemas e Mídias Digitais na Universidade Federal do Ceará (UFC) </a
+          >. Eu sou autodidata, me empenho em construir projetos próprios e
+          explorar ferramentas atuais. Também gosto de aprender com pessoas que
+          me repassem um
+          <span class="text-zenith">conhecimento sólido e valioso</span>.
         </p>
 
-        <NuxtLink
-          :to="localePath('/projects')"
-          class="bg-secondary-50 hover:shadow-secondary-50/20 text-secondary-900 mt-6 flex items-center gap-1 rounded px-5 py-3 text-sm font-semibold transition-shadow hover:shadow-lg"
-        >
-          <span>{{ t('know_my_work') }}</span>
-          <ChevronRightIcon class="w-5" />
-        </NuxtLink>
+        <nav class="flex items-center gap-10">
+          <NuxtLink
+            to="/projects"
+            class="flex items-center gap-2 font-semibold transition-all"
+          >
+            Projetos
+            <ArrowUpRight class="w-4" />
+          </NuxtLink>
+
+          <NuxtLink
+            to="/skills"
+            class="flex items-center gap-2 font-semibold transition-all"
+          >
+            Habilidades
+            <ArrowUpRight class="w-4" />
+          </NuxtLink>
+        </nav>
       </div>
     </main>
 

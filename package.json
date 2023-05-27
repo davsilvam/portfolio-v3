@@ -9,13 +9,12 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
-    "@nuxtjs/i18n": "^8.0.0-beta.10",
     "@nuxtjs/tailwindcss": "^6.6.0",
-    "nuxt": "^3.3.1",
+    "nuxt": "^3.5.1",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.5"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.0.17"
+    "lucide-vue-next": "^0.221.0"
   }
 }

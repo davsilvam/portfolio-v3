@@ -1,43 +1,46 @@
-<script lang="ts" setup>
-  const { t } = useLang()
-</script>
-
 <template>
   <section class="flex w-full flex-col lg:w-1/2">
     <SkillContainer>
-      <template #title>{{ t('development') }}</template>
+      <template #title>Desenvolvimento</template>
+
       <template #skills>
-        <li>
-          <IconNuxt class="fill-secondary-50 h-6 w-fit" />
-          <span>Nuxt 3</span>
+        <li class="font-semibold">
+          <IconNuxt class="fill-zenith h-6 w-fit" />
+          Nuxt 3
         </li>
-        <li>
-          <IconVue class="fill-secondary-50 h-5 w-fit" />
-          <span>Vue 3</span>
+
+        <li class="font-semibold">
+          <IconVue class="fill-zenith h-5 w-fit" />
+          Vue 3
         </li>
-        <li>
-          <IconTailwindCSS class="fill-secondary-50 h-6 w-fit" />
-          <span>TailwindCSS</span>
+
+        <li class="font-semibold">
+          <IconTailwindCSS class="fill-zenith h-6 w-fit" />
+          TailwindCSS
         </li>
-        <li>
-          <IconTypeScript class="fill-secondary-50 h-5 w-fit" />
-          <span>TypeScript</span>
+
+        <li class="font-semibold">
+          <IconTypeScript class="fill-zenith h-5 w-fit" />
+          TypeScript
         </li>
       </template>
     </SkillContainer>
 
     <SkillContainer>
-      <template #title>{{ t('learning') }}</template>
+      <template #title>Aprendendo</template>
+
       <template #skills>
-        <li>
-          <IconPrisma class="fill-secondary-50 h-6 w-fit" />
-          <span>Prisma</span>
+        <li class="font-semibold">
+          <IconPrisma class="fill-zenith h-6 w-fit" />
+          Prisma
         </li>
       </template>
     </SkillContainer>
 
-    <p class="text-secondary-300 text-sm">
-      {{ t('extra_skills') }}
+    <p class="text-dawn text-sm font-medium leading-relaxed">
+      Além disso, possuo conhecimento em tecnologias como: Pinia, Prisma,
+      Back-end as a Service ou BaaS (Firebase e Supabase), React, Radix UI,
+      Styled Components, Sass.
     </p>
   </section>
 </template>

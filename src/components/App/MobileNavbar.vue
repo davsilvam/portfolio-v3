@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-  import {
-    Bars3Icon,
-    HomeIcon,
-    RocketLaunchIcon,
-    SparklesIcon
-  } from '@heroicons/vue/24/outline'
+  import { ArrowUpRight, ExternalLink, Menu } from 'lucide-vue-next'
 
   const isNavbarOpen = ref<boolean>(false)
 
@@ -12,8 +7,6 @@
     isNavbarOpen.value = !isNavbarOpen.value
   }
 
-  const { t } = useLang()
-  const localePath = useLocalePath()
   const route = useRoute()
 
   watch(route, () => {
@@ -23,59 +16,64 @@
 
 <template>
   <div
-    class="bg-secondary-900 border-secondary-800 fixed bottom-0 flex w-full flex-col border-t transition-transform duration-300 ease-in-out md:hidden"
-    :class="[isNavbarOpen ? 'translate-y-0' : 'translate-y-72']"
+    class="bg-night border-dawn/10 fixed bottom-0 flex w-full flex-col border-t transition-transform duration-300 ease-in-out md:hidden"
+    :class="[isNavbarOpen ? 'translate-y-0' : 'translate-y-[294px]']"
   >
     <button
       @click="toogleNavbar"
-      class="text-secondary-50 border-secondary-800 flex h-20 w-full items-center justify-center gap-2 border-b font-semibold"
+      class="text-zenith border-dawn/10 flex h-20 w-full items-center justify-center gap-2 border-b font-semibold"
     >
-      <Bars3Icon class="w-6" /> <span>Menu</span>
+      <Menu class="w-6" />
+      Menu
     </button>
 
-    <nav class="text-secondary-50 flex flex-col gap-2 px-3 py-5">
+    <nav class="text-zenith flex flex-col gap-2 px-3 py-5">
       <NuxtLink
-        :to="localePath('/')"
-        class="hover:bg-secondary-800 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
+        to="/"
+        class="hover:bg-dawn/10 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
       >
-        <HomeIcon class="w-5" />
-        <span>{{ t('home_page') }}</span>
+        Página Inicial
+        <ArrowUpRight class="w-4" />
       </NuxtLink>
 
       <NuxtLink
-        :to="localePath('/projects')"
-        class="hover:bg-secondary-800 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
+        to="/projects"
+        class="hover:bg-dawn/10 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
       >
-        <RocketLaunchIcon class="w-5" />
-        <span>{{ t('projects') }}</span>
+        Projetos
+        <ArrowUpRight class="w-4" />
       </NuxtLink>
 
       <NuxtLink
-        :to="localePath('/skills')"
-        class="hover:bg-secondary-800 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
+        to="/skills"
+        class="hover:bg-dawn/10 flex w-full items-center justify-center gap-3 rounded-md p-3 text-lg font-semibold transition-colors"
       >
-        <SparklesIcon class="w-5" />
-        <span>{{ t('skills') }}</span>
+        Habilidades
+        <ArrowUpRight class="w-4" />
       </NuxtLink>
 
-      <hr class="border-secondary-800 my-2 border-[0.5px]" />
+      <hr class="border-dawn/10 my-2 border-[0.5px]" />
 
       <div class="flex w-full items-center gap-2">
-        <SocialLink
-          class="h-10 w-full"
-          href="https://github.com/davsilvam?tab=repositories"
+        <a
+          class="hover:bg-dawn/10 flex w-full items-center justify-center gap-3 py-2 font-semibold"
+          href="https://github.com/davsilvam"
           target="_blank"
         >
-          <IconGitHub class="w-4" /> <span>GitHub</span>
-        </SocialLink>
+          <IconGitHub class="w-4" />
+          Github
+          <ExternalLink class="w-[14px]" />
+        </a>
 
-        <SocialLink
-          class="h-10 w-full"
+        <a
+          class="hover:bg-dawn/10 flex w-full items-center justify-center gap-3 py-2 font-semibold"
           href="https://www.linkedin.com/in/davsilvam/"
           target="_blank"
         >
-          <IconLinkedin class="w-4" /> <span>Linkedin</span>
-        </SocialLink>
+          <IconLinkedin class="w-4" />
+          Linkedin
+          <ExternalLink class="w-[14px]" />
+        </a>
       </div>
     </nav>
   </div>

@@ -1,24 +1,31 @@
+<script lang="ts" setup>
+  import { ExternalLink } from 'lucide-vue-next'
+</script>
+
 <template>
   <footer
-    class="text-secondary-50 fixed bottom-0 flex w-full justify-end p-10 text-sm max-md:hidden"
+    class="text-zenith fixed bottom-0 flex w-full justify-end p-10 text-sm max-md:hidden"
   >
-    <div class="flex items-center gap-6">
-      <a href="https://github.com/davsilvam" target="_blank">
-        <IconGitHub class="w-5" />
+    <div class="flex items-center gap-10">
+      <a
+        class="flex items-center gap-3 font-semibold"
+        href="https://github.com/davsilvam"
+        target="_blank"
+      >
+        <IconGitHub class="w-4" />
+        Github
+        <ExternalLink class="w-[14px]" />
       </a>
-      <a href="https://www.linkedin.com/in/davsilvam/" target="_blank">
-        <IconLinkedin class="w-5" />
+
+      <a
+        class="flex items-center gap-3 font-semibold"
+        href="https://www.linkedin.com/in/davsilvam/"
+        target="_blank"
+      >
+        <IconLinkedin class="w-4" />
+        Linkedin
+        <ExternalLink class="w-[14px]" />
       </a>
-      <p>
-        Copyright © 2023 -
-        <a
-          class="font-semibold"
-          href="https://github.com/davsilvam"
-          target="_blank"
-        >
-          davsilvam
-        </a>
-      </p>
     </div>
   </footer>
 </template>

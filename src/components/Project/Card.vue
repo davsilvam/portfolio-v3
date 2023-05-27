@@ -1,49 +1,65 @@
 <script lang="ts" setup>
-  import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
+  import { ArrowRight } from 'lucide-vue-next'
   import { Project } from '../../composables/useProjects'
 
-  defineProps<{
+  const props = defineProps<{
     project: Project
   }>()
+
+  interface Technologies {
+    [tech: string]: {
+      name: string
+      background: string
+      border: string
+    }
+  }
+
+  const technologies: Technologies = {
+    Vue: {
+      name: 'Vue',
+      background: 'bg-green-400',
+      border: 'border-green-300'
+    },
+    TypeScript: {
+      name: 'TypeScript',
+      background: 'bg-blue-400',
+      border: 'border-blue-300'
+    }
+  }
+
+  const tech = technologies[props.project.language]
 </script>
 
 <template>
   <article
-    class="bg-secondary-800 flex w-full flex-col justify-between gap-10 p-8"
+    class="bg-dusk text-zenith flex w-full flex-col justify-between gap-3 p-8"
   >
-    <div class="flex flex-col">
-      <img
-        class="mb-5 h-10 w-fit"
-        :src="project.image_url"
-        :alt="`${project.name} logo.`"
-      />
-      <h1 class="text-secondary-50 font-italiana text-xl font-bold">
+    <div class="flex flex-col gap-1">
+      <strong class="text-lg font-bold">
         {{ project.name }}
-      </h1>
-      <p class="text-secondary-200 pt-1 text-sm">
+      </strong>
+
+      <p class="text-dawn pt-1 text-sm font-medium leading-relaxed">
         {{ project.description }}
       </p>
     </div>
 
     <footer class="flex items-center justify-between">
-      <p class="text-secondary-100 text-sm">
-        Feito com
-        <em class="text-secondary-50 font-semibold">{{ project.language }}</em>
-      </p>
+      <span class="text-dawn flex items-center gap-2 text-sm font-semibold">
+        <div
+          class="h-3 w-3 rounded-full border"
+          :class="[tech.background, tech.border]"
+        />
 
-      <div class="flex items-center gap-3">
-        <a class="group" :href="project.repository_link" target="_blank">
-          <IconGitHub class="w-5" />
-        </a>
+        {{ tech.name }}
+      </span>
 
-        <a
-          class="hover:text-secondary-300 text-secondary-50 grid place-items-center"
-          :href="project.deploy_link"
-          target="_blank"
-        >
-          <ArrowTopRightOnSquareIcon class="w-5" />
-        </a>
-      </div>
+      <NuxtLink
+        class="group flex cursor-pointer items-center gap-2 p-2 font-semibold"
+      >
+        Ver mais
+        <ArrowRight class="w-4 transition-all group-hover:translate-x-1" />
+      </NuxtLink>
     </footer>
   </article>
 </template>

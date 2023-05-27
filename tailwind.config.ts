@@ -10,10 +10,15 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      sans: ['Inter', 'sans-serif'],
       italiana: ['Italiana', 'serif']
     },
     extend: {
       colors: {
+        dawn: 'rgb(148, 148, 149)',
+        dusk: 'rgb(32, 32, 34)',
+        night: 'rgb(18, 18, 18)',
+        zenith: 'rgb(255, 255, 255)',
         secondary: {
           50: '#f7f7f7',
           100: '#e3e3e3',
