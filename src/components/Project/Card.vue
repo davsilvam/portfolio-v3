@@ -54,12 +54,14 @@
         {{ tech.name }}
       </span>
 
-      <NuxtLink
+      <a
         class="group flex cursor-pointer items-center gap-2 p-2 font-semibold"
+        :href="project.repository_link"
+        target="_blank"
       >
         Ver mais
         <ArrowRight class="w-4 transition-all group-hover:translate-x-1" />
-      </NuxtLink>
+      </a>
     </footer>
   </article>
 </template>

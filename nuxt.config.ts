@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'fade', mode: 'out-in' }
   },
   srcDir: 'src/',
-  modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss'],
   tailwindcss: {
     cssPath: './styles/global.css'
   },
