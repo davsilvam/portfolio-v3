@@ -32,7 +32,7 @@
 
 <template>
   <article
-    class="bg-dusk text-zenith flex w-full flex-col justify-between gap-3 p-8"
+    class="bg-dusk text-zenith flex w-full flex-col justify-between gap-3 p-8 transition-all ease-in hover:scale-105"
   >
     <div class="flex flex-col gap-1">
       <strong class="text-lg font-bold">
