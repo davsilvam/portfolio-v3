@@ -1,9 +1,7 @@
 import { type Project } from '~/types/github'
 
 export function useProjects() {
-  const projects = useState<Project[]>('projects', () => [])
-
-  const { data, error } = useFetch<Project[]>(
+  const { data: projects, error } = useFetch<Project[]>(
     'https://api.github.com/users/davsilvam/repos',
     {
       transform: data =>
@@ -16,7 +14,9 @@ export function useProjects() {
 
           else
             return 1
-        }),
+        }).filter(
+          project => project.name !== 'davsilvam',
+        ),
     },
   )
 
@@ -24,12 +24,6 @@ export function useProjects() {
     throw new Error(error.value.message, {
       cause: error.value.cause,
     })
-  }
-
-  if (data.value) {
-    projects.value = data.value.filter(
-      project => project.name !== 'davsilvam',
-    )
   }
 
   return {

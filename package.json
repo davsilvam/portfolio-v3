@@ -7,15 +7,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "lucide-vue-next": "^0.221.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.2",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "nuxt": "^3.6.5",
-    "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.5"
-  },
-  "dependencies": {
-    "lucide-vue-next": "^0.221.0"
   }
 }

@@ -22,8 +22,8 @@ const technologies: Technologies = {
   },
   JavaScript: {
     name: 'JavaScript',
-    background: 'bg-yellow-400',
-    border: 'border-yellow-300',
+    background: 'bg-amber-400',
+    border: 'border-amber-300',
   },
   TypeScript: {
     name: 'TypeScript',
