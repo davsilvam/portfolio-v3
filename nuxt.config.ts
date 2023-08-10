@@ -1,22 +1,22 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   alias: {
-    '@': fileURLToPath(new URL('./', import.meta.url))
+    '@': fileURLToPath(new URL('./', import.meta.url)),
   },
   app: {
-    pageTransition: { name: 'fade', mode: 'out-in' }
+    pageTransition: { name: 'fade', mode: 'out-in' },
   },
   srcDir: 'src/',
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/eslint-module'],
   tailwindcss: {
-    cssPath: './styles/global.css'
+    cssPath: './styles/global.css',
   },
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {}
-    }
-  }
+      autoprefixer: {},
+    },
+  },
 })

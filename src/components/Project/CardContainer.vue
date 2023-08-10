@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { projects } from '@/src/composables/useProjects'
+const { projects } = useProjects()
 </script>
 
 <template>
@@ -9,8 +9,8 @@
     <div id="container" class="flex w-fit flex-col gap-2">
       <ProjectCard
         v-for="project in projects"
+        :key="project.id"
         :project="project"
-        :key="project.name"
       />
     </div>
   </section>

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import { ArrowUpRight } from 'lucide-vue-next'
+import { ArrowUpRight } from 'lucide-vue-next'
 
-  interface NavigationLinkProps {
-    path: string
-  }
+interface NavigationLinkProps {
+  path: string
+}
 
-  defineProps<NavigationLinkProps>()
+defineProps<NavigationLinkProps>()
 </script>
 
 <template>
@@ -13,7 +13,7 @@
     :to="path"
     class="flex items-center gap-2 font-semibold transition-all"
   >
-    <slot></slot>
+    <slot />
     <ArrowUpRight class="w-4" />
   </NuxtLink>
 </template>

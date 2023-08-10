@@ -5,12 +5,12 @@
     <Link
       rel="preconnect"
       href="https://fonts.gstatic.com"
-      crossOrigin="anonymous"
+      cross-origin="anonymous"
     />
 
     <Link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Italiana&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700;900&family=Sora:wght@500;600;700&display=swap"
     />
 
     <Title>David Silva</Title>

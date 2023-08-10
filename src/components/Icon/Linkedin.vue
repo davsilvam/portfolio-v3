@@ -1,6 +1,5 @@
 <template>
   <svg
-    class="fill-zenith"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 5 1036 990"
   >

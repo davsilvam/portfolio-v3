@@ -11,7 +11,6 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
-      italiana: ['Italiana', 'serif']
     },
     extend: {
       colors: {
