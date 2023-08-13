@@ -9,11 +9,9 @@ export function useProjects() {
           const firstDate = new Date(a.pushed_at).getTime()
           const secondDate = new Date(b.pushed_at).getTime()
 
-          if (firstDate > secondDate)
-            return -1
-
-          else
-            return 1
+          return firstDate > secondDate
+            ? -1
+            : 1
         }).filter(
           project => project.name !== 'davsilvam',
         ),

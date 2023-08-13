@@ -56,7 +56,7 @@ watch(route, () => {
 
       <div class="flex w-full items-center gap-2">
         <a
-          class="flex w-full items-center justify-center gap-3 py-2 font-semibold fill-zenith hover:bg-dawn/10"
+          class="flex w-full items-center justify-center gap-3 fill-zenith py-2 font-semibold hover:bg-dawn/10"
           href="https://github.com/davsilvam"
           target="_blank"
         >
