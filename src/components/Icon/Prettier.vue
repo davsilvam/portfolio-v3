@@ -163,7 +163,13 @@
         height="12.1904762"
         rx="5"
       />
-      <rect x="0" y="0" width="158.47619" height="12.1904762" rx="5" />
+      <rect
+        x="0"
+        y="0"
+        width="158.47619"
+        height="12.1904762"
+        rx="5"
+      />
     </g>
   </svg>
 </template>

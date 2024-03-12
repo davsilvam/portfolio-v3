@@ -1,4 +1,4 @@
-import { type Project } from '~/types/github'
+import type { Project } from '~/types/github'
 
 export function useProjects() {
   const { data: projects, error } = useFetch<Project[]>(

@@ -6,7 +6,10 @@ const { projects } = useProjects()
   <section
     class="flex w-full flex-col items-stretch justify-center gap-10 lg:w-1/2"
   >
-    <div id="container" class="flex w-fit flex-col gap-2">
+    <div
+      id="container"
+      class="flex w-fit flex-col gap-2"
+    >
       <ProjectCard
         v-for="project in projects"
         :key="project.id"

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ArrowRight } from 'lucide-vue-next'
-import { type Project } from '~/types/github'
+import type { Project } from '~/types/github'
 
 const props = defineProps<{
   project: Project
@@ -29,6 +29,26 @@ const technologies: Technologies = {
     name: 'TypeScript',
     background: 'bg-blue-400',
     border: 'border-blue-300',
+  },
+  Kotlin: {
+    name: 'Kotlin',
+    background: 'bg-indigo-400',
+    border: 'border-indigo-300',
+  },
+  Java: {
+    name: 'Java',
+    background: 'bg-red-400',
+    border: 'border-red-300',
+  },
+  Python: {
+    name: 'Python',
+    background: 'bg-yellow-400',
+    border: 'border-yellow-300',
+  },
+  Shell: {
+    name: 'Shell',
+    background: 'bg-gray-400',
+    border: 'border-gray-300',
   },
 }
 

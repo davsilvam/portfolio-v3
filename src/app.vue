@@ -1,6 +1,9 @@
 <template>
   <Head>
-    <Link rel="preconnect" href="https://fonts.googleapis.com" />
+    <Link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
 
     <Link
       rel="preconnect"

@@ -43,7 +43,8 @@ import { ExternalLink } from 'lucide-vue-next'
         </p>
 
         <a
-          href="https://github.com/davsilvam?tab=repositories" target="_blank"
+          href="https://github.com/davsilvam?tab=repositories"
+          target="_blank"
           class="flex items-center gap-3 font-semibold"
         >
           <IconGitHub class="w-4 fill-zenith" />

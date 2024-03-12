@@ -1,9 +1,11 @@
 {
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -12,11 +14,11 @@
     "lucide-vue-next": "^0.221.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.40.2",
-    "@nuxtjs/eslint-module": "^4.1.0",
+    "@antfu/eslint-config": "^2.8.1",
     "@nuxtjs/tailwindcss": "^6.6.0",
-    "eslint-plugin-tailwindcss": "^3.13.0",
-    "nuxt": "^3.6.5",
+    "eslint": "^8.57.0",
+    "nuxt": "^3.10.3",
+    "nuxt-module-eslint-config": "^0.1.1",
     "prettier-plugin-tailwindcss": "^0.2.5"
   }
 }

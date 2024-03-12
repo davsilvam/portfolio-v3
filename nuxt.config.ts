@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
   srcDir: 'src/',
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/eslint-module'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-module-eslint-config'],
   tailwindcss: {
     cssPath: './styles/global.css',
   },
