@@ -1,41 +1,58 @@
 # Portfólio
 
-## :sparkles: **Projeto**
+<img src="./.github/banner.png" />
 
-![banner](./.github/banner.png)
+## :bookmark: **Sumário**
+- [Sobre o Projeto](#sparkles-sobre-o-projeto)
+- [Visual do Projeto](#art-visual-do-projeto)
+   - [Desktop e Telas Maiores](#desktop-e-telas-maiores)
+   - [Mobile e Telas Menores](#mobile-e-telas-menores)
+- [Tecnologias](#wrench-tecnologias)
+   - [Construção do site](#construção-do-site)
+   - [Estilização](#estilização)
+   - [IDE, Versionamento e Deploy](#ide-versionamento-e-deploy)
+- [Configurações e Instalação](#rocket-configurações-e-instalação)
+     - [Requisitos](#requisitos)
+- [Licença](#balance_scale-licença)
+
+## :sparkles: **Sobre o Projeto**
 
 Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilidades. Ele foi construído com um sistema de navegação no qual as setas o levam para uma das seções do site.
 
-[Veja o projeto completo aqui.](https://davidsilvam.vercel.app)
+<p align="center">
+   <a href="https://davidsilvam.vercel.app">Veja o projeto completo aqui.</a>
+</p>
 
 ## :art: **Visual do Projeto**
 
 ### _Desktop e Telas Maiores_
 
-<div align="center">
+<h1 align="center">
     <img src="./.github/desktop.png" style="width: 80%">
-</div>
+</h1>
 
 ### _Mobile e Telas Menores_
 
-<div align="center">
+<h1 align="center">
     <img src="./.github/mobile.png" style="width: 40%">
-</div>
+</h1>
 
 ## :wrench: **Tecnologias**
 
-### :hammer: **Construção do site**
+Tecnologias utilizadas no projeto.
+
+### **Construção do site**
 
 - [TypeScript](https://www.typescriptlang.org)
-- [Nuxt 3](https://nuxt.com)
+- [Nuxt](https://nuxt.com)
 
-### :art: **Estilização**
+### **Estilização**
 
 - [Tailwind CSS](https://tailwindcss.com)
 - [Lucide Icons](https://lucide.dev)
 - [Google Fonts](https://fonts.google.com)
 
-### :open_file_folder: **IDE, Versionamento e Deploy**
+### **IDE, Versionamento e Deploy**
 
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Git](https://git-scm.com)
@@ -46,9 +63,9 @@ Esse é meu portfólio, no qual apresento um pouco sobre mim, projetos e habilid
 
 ### Requisitos
 
-- [Node e NPM](https://nodejs.org/)
+- [Node](https://nodejs.org/) e um gerenciador de pacotes, usei [npm](https://nodejs.org/).
 
-Recomendo que veja a [documentação de configuração do Nuxt 3](https://nuxt.com/docs/getting-started/introduction).
+Recomendo que veja a [documentação de configuração do Nuxt](https://nuxt.com/docs/getting-started/installation).
 
 ```sh
 # Clonando o projeto
@@ -66,10 +83,12 @@ npm run build
 
 ## :balance_scale: **Licença**
 
-Esse projeto está sob a [licença MIT](https://github.com/davsilvam/portfolio-v3/blob/main/LICENSE).
-
-<p align="center">
-  Feito com :white_heart: por <a href="https://www.linkedin.com/in/davsilvam/">David Silva</a>.
-</p>
+Esse projeto está sob a [licença MIT](https://github.com/davsilvam/portfolio-v3/blob/main/LICENSE.md).
 
 ---
+
+Feito com 🖤 e ☕ por <a href="https://www.linkedin.com/in/davsilvam/">David Silva</a>.
+
+> [Portfólio](https://davidsilvam.vercel.app) &nbsp;&middot;&nbsp;
+> GitHub [@davsilvam](https://github.com/davsilvam) &nbsp;&middot;&nbsp;
+> Instagram [@davsilvam_](https://www.instagram.com/davsilvam_/)
